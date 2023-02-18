@@ -1,17 +1,24 @@
-import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:weather_app/model/weathermodel.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 
-getweather() async {
-  var baseurl =
-      "https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=f5783e1fee68d6228723ecc46804ee40";
-  var url = Uri.parse(baseurl);
-  var res = await http.get(url);
-  var jsonRes = jsonDecode(res.body);
-  print(res.statusCode);
-  print(res.body);
-  Map mydata = jsonRes["coord"];
-  print(mydata);
+getdata() async {
+  // final String cityName = 'New York';
+  var apiKey =
+      "https://api.openweathermap.org/data/2.5/weather?q=karachi&appid=f5783e1fee68d6228723ecc46804ee40"; // Replace with your OpenWeatherMap API key
 
-  return jsonRes;
+  var url = Uri.parse(apiKey);
+
+  var response = await get(url);
+  var resdata = jsonDecode(response.body);
+  if (response.statusCode == 200) {
+    final temperature = resdata['main'];
+    final actualtemperature = resdata['temp'];
+    print(temperature);
+    print(actualtemperature);
+    // final weatherDescription = resdata['weather'][0]['description'];
+
+  } else {
+    print('Error: ${response.statusCode}');
+  }
 }

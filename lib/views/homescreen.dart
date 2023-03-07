@@ -226,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     SizedBox(
                                       width: 40,
                                     ),
-                                    Image.asset("images/rain.png"),
+                                    Image.asset("images/rain.png",width: 60,),
                                   ],
                                 ),
                                 decoration: BoxDecoration(
@@ -304,7 +304,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fontSize: 15,
                                             color: ColorConstraint.FONTS)),
                                     SizedBox(
-                                      width: 80,
+                                      width: 40,
                                     ),
                                     Text("${(snapshot.data[0].wind)} Km/h",
                                         style: TextStyle(
@@ -312,9 +312,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                             fontWeight: FontWeight.bold,
                                             color: ColorConstraint.font)),
                                     SizedBox(
-                                      width: 10,
+                                      width: 40,
                                     ),
-                                    Image.asset("images/wind.png"),
+                                    Image.asset("images/wind.png",),
                                   ],
                                 ),
                                 decoration: BoxDecoration(
@@ -366,7 +366,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
@@ -419,7 +419,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
@@ -472,7 +472,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
@@ -525,7 +525,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
@@ -578,7 +578,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
@@ -631,7 +631,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      Text("${(snapshot.data[0].degree)}°",
+                                      Text("${(snapshot.data[0].temp - 273).toStringAsFixed(0)}°C",
                                           style: TextStyle(
                                               fontSize: 23,
                                               color: ColorConstraint.FONTS)),
